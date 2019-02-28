@@ -1,6 +1,6 @@
 {
 	"defaultSeverity": "error",
-	"extend": [ "tslint-config-prettier" ],
+	"extend": [ "tslint-config-alloy", "tslint-config-prettier" ],
 	"linterOptions": {
 		"exclude": [ "**/node_modules/**" ]
 	},
@@ -9,17 +9,24 @@
 	},
 	"rules": {
 		"typedef": {
-			"options": [ "property-declaration" ]
+			"options": [ "property-declaration", "member-variable-declaration" ]
 		},
+		"file-name-casing": [ true, "kebab-case" ],
 		"class-name": true,
 		"interface-name": true,
 		"variable-name": {
-			"options": [ "ban-keywords", "check-format", "allow-leading-underscore", "allow-pascal-case" ]
+			"options": [
+				"ban-keywords",
+				"check-format",
+				"allow-leading-underscore",
+				"allow-snake-case",
+				"allow-pascal-case"
+			]
 		},
 		"no-var-keyword": true,
 		"no-var-requires": true,
 		"no-any": false,
-		"no-string-literal": true,
+		"no-string-literal": false,
 		"await-promise": true,
 		"promise-function-async": true
 	},

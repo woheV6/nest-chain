@@ -1,16 +1,18 @@
 {
-	"version": "1.8.0",
 	"compilerOptions": {
-		"outDir": "build/compiled",
-		"lib": [ "es6" ],
-		"target": "es5",
+		"allowJs": true,
 		"module": "commonjs",
-		"moduleResolution": "node",
+		"declaration": false,
+		"noImplicitAny": false,
+		"removeComments": true,
+		"noLib": false,
+		"allowSyntheticDefaultImports": true,
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
+		"target": "es6",
 		"sourceMap": true,
-		"noImplicitAny": true,
-		"declaration": true
+		"outDir": "./dist",
+		"baseUrl": "./"
 	},
-	"exclude": [ "build", "node_modules" ]
+	"exclude": [ "node_modules" ]
 }
