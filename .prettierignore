@@ -1,0 +1,4 @@
+*.md
+packages/**/*.d.ts
+packages/**/*.js
+node_modules/

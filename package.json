@@ -5,6 +5,7 @@
     "author": "roylin <1002591652@qq.com>",
     "license": "MIT",
     "scripts": {
+        "docs": "docsify serve docs",
         "style": "run-s style:**",
         "style:prettier": "prettier --write \"app/**/*.ts\"",
         "style:lint": "tslint -p tsconfig.json -c tslint.json"
