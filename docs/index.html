@@ -22,9 +22,18 @@
                 logo: '/_media/x-liquid.png',
                 repo: 'https://github.com/x-liquid',
                 coverpage: true,
-                loadSidebar: true
+                loadSidebar: true,
+                search: {
+                    maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+                    paths: 'auto', // [] or 'auto'
+                    placeholder: '搜索',
+                    noData: '找不到结果',
+                    // 搜索标题的最大程级, 1 - 6
+                    depth: 3
+                }
             };
         </script>
         <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+        <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
     </body>
 </html>
