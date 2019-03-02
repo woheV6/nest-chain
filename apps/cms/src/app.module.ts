@@ -8,7 +8,6 @@ import {
   LoggerMiddleware,
   ConfigModule,
   ConfigService,
-  LoggerService,
 } from '@x-liquid/common';
 
 @Module({
