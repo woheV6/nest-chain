@@ -68,3 +68,6 @@ runtime/
 
 # env
 .env
+
+# coverage
+coverage/
