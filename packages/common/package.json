@@ -1,9 +1,10 @@
 {
-    "name": "packages",
-    "version": "1.0.0",
-    "main": "index.js",
+    "name": "@x-liquid/common",
+    "version": "0.0.1",
+    "main": "dist/index.js",
     "license": "MIT",
     "scripts": {
+        "build": "rimraf dist && tsc",
         "test": "jest",
         "test:watch": "jest --watch",
         "test:cov": "jest --coverage",
@@ -42,5 +43,20 @@
         },
         "coverageDirectory": "../coverage",
         "testEnvironment": "node"
-    }
+    },
+    "description": "plasma cms",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/x-liquid/plasma.git"
+    },
+    "author": "x-roylin",
+    "private": false,
+    "bugs": {
+        "url": "https://github.com/x-liquid/plasma/issues"
+    },
+    "homepage": "https://github.com/x-liquid/plasma#readme",
+    "keywords": [
+        "nest",
+        "cms"
+    ]
 }

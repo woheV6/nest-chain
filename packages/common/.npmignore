@@ -1,0 +1,26 @@
+# source
+**/*.ts
+*.ts
+
+# definitions
+!**/*.d.ts
+!*.d.ts
+
+# configuration
+package-lock.json
+tslint.json
+tsconfig.json
+.prettierrc
+
+# coverage
+coverage/
+
+/.git/
+/.vscode/
+/docs/
+/node_modules/
+.gitignore
+.npmignore
+tslint.json
+tsconfig.json
+*.log
