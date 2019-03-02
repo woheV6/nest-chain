@@ -5,6 +5,7 @@ brancher:
     only:
         - master
 install:
+    - yarn
     - yarn ci
 script:
     - yarn test
