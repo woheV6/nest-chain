@@ -1,9 +1,10 @@
-import { Module, DynamicModule, Provider } from '@nestjs/common';
+import { Module, DynamicModule, Provider, Global } from '@nestjs/common';
 import { LOGGER_MODULE_OPTIONS } from './logger.constants';
 import { ILoggerModuleOptions, ILoggerModuleAsyncOptions, ILoggerOptionsFactory } from './interfaces';
 import { LoggerService } from './services';
 import { LoggerMiddleware } from './middlewares';
 
+@Global()
 @Module({
     providers: [
         {
