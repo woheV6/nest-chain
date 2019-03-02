@@ -14,9 +14,19 @@
         "style:prettier": "prettier --write \"app/**/*.ts\"",
         "style:lint": "tslint -p tsconfig.json -c tslint.json"
     },
+    "dependencies": {
+        "@nestjs/common": "^5.1.0",
+        "@nestjs/core": "^5.1.0",
+        "@x-liquid/common": "^1.0.0",
+        "dotenv": "^6.2.0",
+        "express-session": "^1.15.6",
+        "passport": "^0.4.0",
+        "passport-auth0": "^1.1.0",
+        "reflect-metadata": "^0.1.12",
+        "rxjs": "^6.2.2",
+        "typescript": "^3.0.1"
+    },
     "devDependencies": {
-        "@nestjs/common": "^5.7.3",
-        "@nestjs/core": "^5.7.3",
         "@nestjs/testing": "^5.7.3",
         "@types/jest": "^24.0.9",
         "@types/node": "^11.9.5",
