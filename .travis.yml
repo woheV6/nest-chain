@@ -6,7 +6,6 @@ brancher:
         - master
 install:
     - yarn
-    - yarn ci
 script:
     - yarn test
 after_success:

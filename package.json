@@ -7,7 +7,6 @@
     "scripts": {
         "docs": "docsify serve docs",
         "build": "yarn",
-        "ci": "run-s ci:**",
         "test": "jest --coverage",
         "cov": "codecov",
         "style": "run-s style:**",
