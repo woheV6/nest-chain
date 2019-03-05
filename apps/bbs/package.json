@@ -8,13 +8,19 @@
 		"dev": "nodemon",
 		"debug": "nodemon --config nodemon-debug.json",
 		"build": "rimraf dist && tsc",
-		"prod": "node dist/main.js"
+		"prod": "node dist/main.js",
+		"next:dev": "next -p 4200"
 	},
 	"dependencies": {
 		"@nestjs/common": "^5.1.0",
 		"@nestjs/core": "^5.1.0",
 		"@nestjs/passport": "^5.1.0",
 		"@x-liquid/common": "^1.0.0",
+		"@zeit/next-css": "^1.0.1",
+		"next": "^8.0.3",
+		"react": "^16.8.3",
+		"react-dom": "^16.8.3",
+		"antd": "^3.13.6",
 		"dotenv": "^6.2.0",
 		"express-jwt": "^5.3.1",
 		"jwks-rsa": "^1.4.0",
