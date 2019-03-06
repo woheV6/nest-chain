@@ -1,12 +1,20 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { Layout, Menu, Breadcrumb } from 'antd';
+import { Layout, Breadcrumb } from 'antd';
 import FooterCom from './footer';
 import HeaderCom from './head';
-const { Header, Content } = Layout;
+const { Content } = Layout;
 
 export default class DefaultCom extends React.Component {
+    static defaultProps = {
+        style_layout_content: {
+            background: '#fff', 
+            padding: 24, 
+            minHeight: window.innerHeight - 202
+        }
+    }; 
     render() {
+        const { style_layout_content, children } = this.props;
+        console.log('prop', this.props);
         return (
             <Layout className="layout">
                 <HeaderCom />
@@ -16,7 +24,13 @@ export default class DefaultCom extends React.Component {
                         <Breadcrumb.Item>List</Breadcrumb.Item>
                         <Breadcrumb.Item>App</Breadcrumb.Item>
                     </Breadcrumb>
-                    <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>Content</div>
+                    <div style={style_layout_content}>
+                        { 
+                            React.Children.map(children, () => {
+                                return children
+                            })
+                        }
+                    </div>
                 </Content>
                 <FooterCom />
             </Layout>

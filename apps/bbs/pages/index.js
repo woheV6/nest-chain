@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import PropTypes from 'prop-types';
 import 'antd/dist/antd.css';
-import DefaultCom from './layout/default/default';
+import Components from './views/index';
 
+const DynamicDefaultPublish = dynamic(
+    import('./layout/default/default'), 
+    {ssr: false}
+);
 class Home extends Component {
     render() {
         return (
@@ -12,7 +16,8 @@ class Home extends Component {
                     <title>My page title</title>
                     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 </Head>
-                <DefaultCom />
+                <DynamicDefaultPublish>
+                </DynamicDefaultPublish>
                 <style jsx>{`
                 h1 {
                     color: blue;

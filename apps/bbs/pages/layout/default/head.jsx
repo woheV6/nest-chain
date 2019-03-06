@@ -1,5 +1,6 @@
 import React from 'react';
 import { Layout, Menu } from 'antd';
+import Link from 'next/link';
 const { Header } = Layout;
 
 export default class HeaderCom extends React.Component {
@@ -14,9 +15,9 @@ export default class HeaderCom extends React.Component {
                         defaultSelectedKeys={['2']}
                         style={{ lineHeight: '64px', background: '#f44336' }}
                     >
-                        <Menu.Item key="1">nav 1</Menu.Item>
-                        <Menu.Item key="2">nav 2</Menu.Item>
-                        <Menu.Item key="3">nav 3</Menu.Item>
+                        <Menu.Item key="1"><Link href="/"><a>Home</a></Link></Menu.Item>
+                        <Menu.Item key="2"><Link href="/chat"><a>chat</a></Link></Menu.Item>
+                        <Menu.Item key="3"><Link href='/MainPage'><a>organization</a></Link></Menu.Item>
                     </Menu>
                 </Header>
                 <style jsx>{`
