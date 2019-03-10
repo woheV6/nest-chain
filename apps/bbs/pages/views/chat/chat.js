@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import DefaultCom from '../layout/default/default';
+import DefaultCom from '../../layout/default/default';
 
-class MainPage extends Component {
+class Chat extends Component {
     render() {
         return (
             <DefaultCom>
                 <div>
-                    Hello MainPage;
+                    Chat.....
                 </div>
             </DefaultCom>
         );
     }
 }
 
-export default MainPage;
+export default Chat;

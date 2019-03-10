@@ -1,23 +1,31 @@
 import React from 'react';
 import { Layout, Menu } from 'antd';
 import Link from 'next/link';
+import pageRoutes from '../../config/router.config';
+
 const { Header } = Layout;
 
 export default class HeaderCom extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <Header style={{backgroundColor: '#f44336', boxShadow: '0 2px 5px 0 rgba(0,0,0,.26)'}}>
+                <Header style={{ background: '#f44236', boxShadow: '0 2px 31px 0 rgb(225, 44, 84)', zIndex: 10}}>
                     <div className="logo" />
                     <Menu
                         theme="dark"
                         mode="horizontal"
-                        defaultSelectedKeys={['2']}
-                        style={{ lineHeight: '64px', background: '#f44336' }}
+                        defaultSelectedKeys={[]}
+                        style={{ lineHeight: '64px', background: '#f44236' }}
                     >
-                        <Menu.Item key="1"><Link href="/"><a>Home</a></Link></Menu.Item>
-                        <Menu.Item key="2"><Link href="/chat"><a>chat</a></Link></Menu.Item>
-                        <Menu.Item key="3"><Link href='/MainPage'><a>organization</a></Link></Menu.Item>
+                        {
+                            pageRoutes.map( l => (
+                                <Menu.Item key={l.router_key}>
+                                    <Link href={l.router_url}>
+                                        <a>{l.router_name}</a>
+                                    </Link>
+                                </Menu.Item>
+                            ))
+                        }
                     </Menu>
                 </Header>
                 <style jsx>{`

@@ -2,34 +2,27 @@ import React from 'react';
 import { Layout, Breadcrumb } from 'antd';
 import FooterCom from './footer';
 import HeaderCom from './head';
+import Introduce from '../introduce/index';
 const { Content } = Layout;
 
-export default class DefaultCom extends React.Component {
+class DefaultCom extends React.Component {
     static defaultProps = {
         style_layout_content: {
             background: '#fff', 
             padding: 24, 
-            minHeight: window.innerHeight - 202
+            minHeight: 300
+            // minHeight: window.innerHeight - 202
         }
     }; 
     render() {
         const { style_layout_content, children } = this.props;
-        console.log('prop', this.props);
         return (
-            <Layout className="layout">
+            <Layout style={{height: '100%'}} className="layout">
                 <HeaderCom />
-                <Content style={{ padding: '0 50px' }}>
-                    <Breadcrumb style={{ margin: '16px 0' }}>
-                        <Breadcrumb.Item>Home</Breadcrumb.Item>
-                        <Breadcrumb.Item>List</Breadcrumb.Item>
-                        <Breadcrumb.Item>App</Breadcrumb.Item>
-                    </Breadcrumb>
+                <Introduce />
+                <Content style={{ padding: '0 50px', marginTop: 40 }}>
                     <div style={style_layout_content}>
-                        { 
-                            React.Children.map(children, () => {
-                                return children
-                            })
-                        }
+                        { children }
                     </div>
                 </Content>
                 <FooterCom />
@@ -37,3 +30,10 @@ export default class DefaultCom extends React.Component {
         )
     }
 }
+
+// const DynamicDefaultPublish = dynamic(
+//     import('./index'), 
+// {ssr: false}
+// );
+
+export default DefaultCom
